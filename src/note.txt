@@ -1,0 +1,11 @@
+var func = sub1 => sub2 => sub3 => (param) => {
+  console.log("---START---");
+  console.log("Param->" + param + " sub1->" + sub1);
+  console.log("Param->" + param + " sub2->" + sub2);
+  console.log("Param->" + param + " sub3->" + sub3);
+  console.log("---END---");
+  return sub3;
+};
+
+Calling example:-
+func("SUB1")("SUB2")((function(param){return param;}))("aaa")("bbbb")
