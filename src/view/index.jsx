@@ -8,9 +8,7 @@ const Addresses = ({ ...props }) => {
   console.log("---Addresses END---");
   return (
     <Fragment>
-      <div name={Object.keys(props).map(key => key + "=" + props[key])}>
-        ADDRESS
-      </div>
+      <div {...props}>ADDRESS</div>
     </Fragment>
   );
 };
