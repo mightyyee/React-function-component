@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import withNLS from "../component/i18n";
 import InputForm from "./form";
 
@@ -9,11 +9,15 @@ const Addresses = ({ ...props }) => {
   console.log(Object.keys(props).map(key => key + "=" + props[key]));
   console.log("This->" + this);
   console.log("---Addresses END---");
+  const [address, setAddress] = useState(0);
+  const handleAddress = () => {
+    setAddress(address + 1);
+  };
   return (
     <Fragment>
-      <div {...props}>ANDREW ADDRES</div>
+      <div {...props}>ANDREW ADDRESSS</div>
       <br />
-      <InputForm />
+      <InputForm attr1={address} childHandleAddress={handleAddress} />
     </Fragment>
   );
 };
